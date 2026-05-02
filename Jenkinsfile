@@ -10,5 +10,6 @@ if ( env.BRANCH_NAME.equalsIgnoreCase('main') ){
     echo "checking later"
 }
 else{
-    nodeJSEKSPipeline(configMap)
+    configMap["jiraProject"] = "ROBO"
+    nodeJSEKSMainPipeline(configMap)
 }

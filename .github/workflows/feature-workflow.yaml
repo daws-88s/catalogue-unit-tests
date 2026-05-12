@@ -1,7 +1,7 @@
 name: feature-pipeline
 on: 
-  push:
   workflow_dispatch:
+  push:
 jobs:
   # Job name
   feature-pipeline:
@@ -10,4 +10,5 @@ jobs:
     with:
       project: 'roboshop'
       component: 'catalogue'
+    secrets: inherit
   

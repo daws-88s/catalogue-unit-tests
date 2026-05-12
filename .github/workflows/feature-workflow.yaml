@@ -5,7 +5,7 @@ on:
 jobs:
   # Job name
   feature-pipeline:
-    if: github.ref_name == 'feature-*'
+    if: github.ref_name != 'main'
     uses: daws-88s/workflows/.github/workflows/nodejs-feature-pipeline.yaml@main
     with:
       project: 'roboshop'
